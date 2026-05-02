@@ -1,0 +1,12 @@
+[
+  {
+    "Name": "AgileAi.Api",
+    "Projects": [
+      {
+        "Path": "Poulina.TraceServer.Api\\Poulina.TraceServer.Api.csproj",
+        "Action": "Start",
+        "DebugTarget": "Project"
+      }
+    ]
+  }
+]

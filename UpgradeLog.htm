@@ -1,0 +1,399 @@
+﻿<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+ <html xmlns:msxsl="urn:schemas-microsoft-com:xslt"><head><meta content="en-us" http-equiv="Content-Language" /><meta content="text/html; charset=utf-16" http-equiv="Content-Type" /><title _locID="ConversionReport0">
+          Migration Report
+        </title><style> 
+                    /* Body style, for the entire document */
+                    body
+                    {
+                        background: #F3F3F4;
+                        color: #1E1E1F;
+                        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+                        padding: 0;
+                        margin: 0;
+                    }
+
+                    /* Header1 style, used for the main title */
+                    h1
+                    {
+                        padding: 10px 0px 10px 10px;
+                        font-size: 21pt;
+                        background-color: #E2E2E2;
+                        border-bottom: 1px #C1C1C2 solid; 
+                        color: #201F20;
+                        margin: 0;
+                        font-weight: normal;
+                    }
+
+                    /* Header2 style, used for "Overview" and other sections */
+                    h2
+                    {
+                        font-size: 18pt;
+                        font-weight: normal;
+                        padding: 15px 0 5px 0;
+                        margin: 0;
+                    }
+
+                    /* Header3 style, used for sub-sections, such as project name */
+                    h3
+                    {
+                        font-weight: normal;
+                        font-size: 15pt;
+                        margin: 0;
+                        padding: 15px 0 5px 0;
+                        background-color: transparent;
+                    }
+
+                    /* Color all hyperlinks one color */
+                    a
+                    {
+                        color: #1382CE;
+                    }
+
+                    /* Table styles */ 
+                    table
+                    {
+                        border-spacing: 0 0;
+                        border-collapse: collapse;
+                        font-size: 10pt;
+                    }
+
+                    table th
+                    {
+                        background: #E7E7E8;
+                        text-align: left;
+                        text-decoration: none;
+                        font-weight: normal;
+                        padding: 3px 6px 3px 6px;
+                    }
+
+                    table td
+                    {
+                        vertical-align: top;
+                        padding: 3px 6px 5px 5px;
+                        margin: 0px;
+                        border: 1px solid #E7E7E8;
+                        background: #F7F7F8;
+                    }
+
+                    /* Local link is a style for hyperlinks that link to file:/// content, there are lots so color them as 'normal' text until the user mouse overs */
+                    .localLink
+                    {
+                        color: #1E1E1F;
+                        background: #EEEEED;
+                        text-decoration: none;
+                    }
+
+                    .localLink:hover
+                    {
+                        color: #1382CE;
+                        background: #FFFF99;
+                        text-decoration: none;
+                    }
+
+                    /* Center text, used in the over views cells that contain message level counts */ 
+                    .textCentered
+                    {
+                        text-align: center;
+                    }
+
+                    /* The message cells in message tables should take up all avaliable space */
+                    .messageCell
+                    {
+                        width: 100%;
+                    }
+
+                    /* Padding around the content after the h1 */ 
+                    #content 
+                    {
+	                    padding: 0px 12px 12px 12px; 
+                    }
+
+                    /* The overview table expands to width, with a max width of 97% */ 
+                    #overview table
+                    {
+                        width: auto;
+                        max-width: 75%; 
+                    }
+
+                    /* The messages tables are always 97% width */
+                    #messages table
+                    {
+                        width: 97%;
+                    }
+
+                    /* All Icons */
+                    .IconSuccessEncoded, .IconInfoEncoded, .IconWarningEncoded, .IconErrorEncoded
+                    {
+                        min-width:18px;
+                        min-height:18px; 
+                        background-repeat:no-repeat;
+                        background-position:center;
+                    }
+
+                    /* Success icon encoded */
+                    .IconSuccessEncoded
+                    {
+                        /* Note: Do not delete the comment below. It is used to verify the correctness of the encoded image resource below before the product is released */
+                        /* [---XsltValidateInternal-Base64EncodedImage:IconSuccess#Begin#background-image: url(data:image/png;base64,#Separator#);#End#] */
+                        background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAA7EAAAOxAGVKw4bAAABcElEQVR4Xq2TsUsCURzHv15g8ZJcBWlyiYYgCIWcb9DFRRwMW5TA2c0/QEFwFkxxUQdxVlBwCYWOi6IhWgQhBLHJUCkhLr/BW8S7gvrAg+N+v8/v+x68Z8MGy+XSCyABQAXgBgHGALoASkIIDWSLeLBetdHryMjd5IxQPWT4rn1c/P7+xxp72Cs9m5SZ0Bq2vPnbPFafK2zDvmNHypdC0BPkLlQhxJsCAhQoZwdZU5mwxh720qGo8MzTxTTKZDPCx2HoVzp6lz0Q9tKhyx0kGs8Ny+TkWRKk8lCROwEduhyg9l/6lunOPSfmH3NUH6uQ0KHLAe7JYvJjevm+DAMGJHToKtigE+vwvIidxLamb8IBY9e+C5LiXREkfho3TSd06HJA13/oh6T51MTsfQbHrsMynQ5dDihFjiK8JJAU9AKIWTp76dCVN7HWHrajmUEGvyF9nkbAE6gLIS7kTUyuf2gscLoJrElZo/Mvj+nPz/kLTmfnEwP3tB0AAAAASUVORK5CYII=);
+                    }
+
+                    /* Information icon encoded */
+                    .IconInfoEncoded
+                    {
+                        /* Note: Do not delete the comment below. It is used to verify the correctness of the encoded image resource below before the product is released */
+                        /* [---XsltValidateInternal-Base64EncodedImage:IconInformation#Begin#background-image: url(data:image/png;base64,#Separator#);#End#] */
+                        background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABHElEQVR4Xs2TsUoDQRRF7wwoziokjZUKadInhdhukR9YP8DMX1hYW+QvdsXa/QHBbcXC7W0CamWTQnclFutceIQJwwaWNLlwm5k5d94M76mmaeCrrmsLYOocY12FcxZFUeozCqKqqgYA8uevv1H6VuPxcwlfk5N92KHBxfFeCSAxxswlYAW/Xr989x/mv9gkhtyMDhcAxgzRsp7flj8B/HF1RsMXq+NZMkopaHe7lbKxQUEIGbKsYNoGn969060hZBkQex/W8oRQwsQaW2o3Ago2SVcJUzAgY3N0lTCZZm+zPS8HB51gMmS1DEYyOz9acKO1D8JWTlafKIMxdhvlfdyT94Vv5h7P8Ky7nQzACmhvKq3zk3PjW9asz9D/1oigecsioooAAAAASUVORK5CYII=);
+                    }
+
+                    /* Warning icon encoded */
+                    .IconWarningEncoded
+                    {
+                        /* Note: Do not delete the comment below. It is used to verify the correctness of the encoded image resource below before the product is released */
+                        /* [---XsltValidateInternal-Base64EncodedImage:IconWarning#Begin#background-image: url(data:image/png;base64,#Separator#);#End#] */
+                        background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAx0lEQVR4XpWSMQ7CMAxFf4xAyBMLCxMrO8dhaBcuwdCJS3RJBw7SA/QGTCxdWJgiQYWKXJWKIXHIlyw5lqr34tQgEOdcBsCOx5yZK3hCCKdYXneQkh4pEfqzLfu+wVDSyyzFoJjfz9NB+pAF+eizx2Vruts0k15mPgvS6GYvpVtQhB61IB/dk6AF6fS4Ben0uIX5odtFe8Q/eW1KvFeH4e8khT6+gm5B+t3juyDt7n0jpe+CANTd+oTUjN/U3yVaABnSUjFz/gFq44JaVSCXeQAAAABJRU5ErkJggg==);
+                    }
+
+                    /* Error icon encoded */
+                    .IconErrorEncoded
+                    {
+                        /* Note: Do not delete the comment below. It is used to verify the correctness of the encoded image resource below before the product is released */
+                        /* [---XsltValidateInternal-Base64EncodedImage:IconError#Begin#background-image: url(data:image/png;base64,#Separator#);#End#] */
+                        background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABQElEQVR4XqWTvUoEQRCE6wYPZUA80AfwAQz23uCMjA7MDRQEIzPBVEyNTQUFIw00vcQTTMzuAh/AxEQQT8HF/3G/oGGnEUGuoNnd6qoZuqltyKEsyzVJq5I6rnUp6SjGeGhESikzzlc1eL7opfuVbrqbU1Zw9NCgtQMaZpY0eNnaaL2fHusvTK5vKu7sjSS1Y4y3QUA6K3e3Mau5UFDyMP7tYF9o8cAHZv68vipoIJg971PZIZ5HiwdvYGGvFVFHmGmZ2MxwmQYPXubPl9Up0tfoMQGetXd6mRbvhBw+boZ6WF7Mbv1+GsHRk0fQmPAH1GfmZirbCfDJ61tw3Px8/8pZsPAG4jlVhcPgZ7adwNWBB68lkRQWFiTgFlbnLY3DGGM7izIJIyT/jjIvEJw6fdJTc6krDzh6aMwMP9bvDH4ADSsa9uSWVJkAAAAASUVORK5CYII=);
+                    }
+                 </style><script type="text/javascript" language="javascript"> 
+          
+            // Startup 
+            // Hook up the the loaded event for the document/window, to linkify the document content
+            var startupFunction = function() { linkifyElement("messages"); };
+            
+            if(window.attachEvent)
+            {
+              window.attachEvent('onload', startupFunction);
+            }
+            else if (window.addEventListener) 
+            {
+              window.addEventListener('load', startupFunction, false);
+            }
+            else 
+            {
+              document.addEventListener('load', startupFunction, false);
+            } 
+            
+            // Toggles the visibility of table rows with the specified name 
+            function toggleTableRowsByName(name)
+            {
+               var allRows = document.getElementsByTagName('tr');
+               for (i=0; i < allRows.length; i++)
+               {
+                  var currentName = allRows[i].getAttribute('name');
+                  if(!!currentName && currentName.indexOf(name) == 0)
+                  {
+                      var isVisible = allRows[i].style.display == ''; 
+                      isVisible ? allRows[i].style.display = 'none' : allRows[i].style.display = '';
+                  }
+               }
+            }
+            
+            function scrollToFirstVisibleRow(name) 
+            {
+               var allRows = document.getElementsByTagName('tr');
+               for (i=0; i < allRows.length; i++)
+               {
+                  var currentName = allRows[i].getAttribute('name');
+                  var isVisible = allRows[i].style.display == ''; 
+                  if(!!currentName && currentName.indexOf(name) == 0 && isVisible)
+                  {
+                     allRows[i].scrollIntoView(true); 
+                     return true; 
+                  }
+               }
+               
+               return false;
+            }
+            
+            // Linkifies the specified text content, replaces candidate links with html links 
+            function linkify(text)
+            {
+                 if(!text || 0 === text.length)
+                 {
+                     return text; 
+                 }
+
+                 // Find http, https and ftp links and replace them with hyper links 
+                 var urlLink = /(http|https|ftp)\:\/\/[a-zA-Z0-9\-\.]+(:[a-zA-Z0-9]*)?\/?([a-zA-Z0-9\-\._\?\,\/\\\+&%\$#\=~;\{\}])*/gi;
+                 
+                 return text.replace(urlLink, '<a href="$&">$&</a>') ;
+            }
+            
+            // Linkifies the specified element by ID
+            function linkifyElement(id)
+            {
+                var element = document.getElementById(id);
+                if(!!element)
+                {
+                  element.innerHTML = linkify(element.innerHTML); 
+                }
+            }
+            
+            function ToggleMessageVisibility(projectName)
+            {
+              if(!projectName || 0 === projectName.length)
+              {
+                return; 
+              }
+              
+              toggleTableRowsByName("MessageRowClass" + projectName);
+              toggleTableRowsByName('MessageRowHeaderShow' + projectName);
+              toggleTableRowsByName('MessageRowHeaderHide' + projectName); 
+            }
+            
+            function ScrollToFirstVisibleMessage(projectName)
+            {
+              if(!projectName || 0 === projectName.length)
+              {
+                return; 
+              }
+              
+              // First try the 'Show messages' row
+              if(!scrollToFirstVisibleRow('MessageRowHeaderShow' + projectName))
+              {
+                // Failed to find a visible row for 'Show messages', try an actual message row 
+                scrollToFirstVisibleRow('MessageRowClass' + projectName); 
+              }
+            }
+           </script></head><body><h1 _locID="ConversionReport">
+          Migration Report - AgileAI</h1><div id="content"><h2 _locID="OverviewTitle">Overview</h2><div id="overview"><table><tr><th></th><th _locID="ProjectTableHeader">Project</th><th _locID="PathTableHeader">Path</th><th _locID="ErrorsTableHeader">Errors</th><th _locID="WarningsTableHeader">Warnings</th><th _locID="MessagesTableHeader">Messages</th></tr><tr><td class="IconErrorEncoded" /><td><strong><a href="#Poulina.TraceServer.Api">Poulina.TraceServer.Api</a></strong></td><td>Poulina.TraceServer.Api\Poulina.TraceServer.Api.csproj</td><td class="textCentered"><a href="#Poulina.TraceServer.ApiError">2</a></td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#" onclick="ScrollToFirstVisibleMessage('Poulina.TraceServer.Api'); return false;">39</a></td></tr><tr><td class="IconErrorEncoded" /><td><strong><a href="#TraceServer.Data">TraceServer.Data</a></strong></td><td>TraceServer.Data\TraceServer.Data.csproj</td><td class="textCentered"><a href="#TraceServer.DataError">2</a></td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#" onclick="ScrollToFirstVisibleMessage('TraceServer.Data'); return false;">11</a></td></tr><tr><td class="IconErrorEncoded" /><td><strong><a href="#TraceServer.Domain">TraceServer.Domain</a></strong></td><td>TraceServer.Domain\TraceServer.Domain.csproj</td><td class="textCentered"><a href="#TraceServer.DomainError">2</a></td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#" onclick="ScrollToFirstVisibleMessage('TraceServer.Domain'); return false;">55</a></td></tr><tr><td class="IconErrorEncoded" /><td><strong><a href="#TraceServer.Ioc">TraceServer.Ioc</a></strong></td><td>TraceServer.Ioc\TraceServer.Ioc.csproj</td><td class="textCentered"><a href="#TraceServer.IocError">2</a></td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#" onclick="ScrollToFirstVisibleMessage('TraceServer.Ioc'); return false;">3</a></td></tr></table></div><h2 _locID="SolutionAndProjectsTitle">Solution and projects</h2><div id="messages"><a name="Poulina.TraceServer.Api" /><h3>Poulina.TraceServer.Api</h3><table><tr id="Poulina.TraceServer.ApiHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Message</th></tr><tr name="ErrorRowClassPoulina.TraceServer.Api"><td class="IconErrorEncoded"><a name="Poulina.TraceServer.ApiError" /></td><td class="messageCell"><strong>Poulina.TraceServer.Api\App.xaml:
+        </strong><span>Failed to backup file as C:\Users\JRIBII-LAPTOP\Desktop\DEV 2026\Backup\App.xaml</span></td></tr><tr name="ErrorRowClassPoulina.TraceServer.Api"><td class="IconErrorEncoded"><a name="Poulina.TraceServer.ApiError" /></td><td class="messageCell"><strong>Poulina.TraceServer.Api\Application.xaml:
+        </strong><span>Failed to backup file as C:\Users\JRIBII-LAPTOP\Desktop\DEV 2026\Backup\Application.xaml</span></td></tr><tr name="MessageRowHeaderShowPoulina.TraceServer.Api"><td class="IconInfoEncoded" /><td class="messageCell"><a _locID="ShowAdditionalMessages" href="#" name="Poulina.TraceServer.ApiMessage" onclick="ToggleMessageVisibility('Poulina.TraceServer.Api'); return false;">
+          Show 39 additional messages
+        </a></td></tr><tr name="MessageRowClassPoulina.TraceServer.Api" style="display: none"><td class="IconInfoEncoded"><a name="Poulina.TraceServer.ApiMessage" /></td><td class="messageCell"><strong>Poulina.TraceServer.Api\Poulina.TraceServer.Api.csproj:
+        </strong><span>Project file successfully backed up as C:\Users\JRIBII-LAPTOP\Desktop\DEV 2026\Backup\Poulina.TraceServer.Api.csproj</span></td></tr><tr name="MessageRowClassPoulina.TraceServer.Api" style="display: none"><td class="IconInfoEncoded"><a name="Poulina.TraceServer.ApiMessage" /></td><td class="messageCell"><strong>Poulina.TraceServer.Api\Controllers\ActivityController.cs:
+        </strong><span>File successfully backed up as C:\Users\JRIBII-LAPTOP\Desktop\DEV 2026\Backup\Controllers\ActivityController.cs</span></td></tr><tr name="MessageRowClassPoulina.TraceServer.Api" style="display: none"><td class="IconInfoEncoded"><a name="Poulina.TraceServer.ApiMessage" /></td><td class="messageCell"><strong>Poulina.TraceServer.Api\Controllers\AIController.cs:
+        </strong><span>File successfully backed up as C:\Users\JRIBII-LAPTOP\Desktop\DEV 2026\Backup\Controllers\AIController.cs</span></td></tr><tr name="MessageRowClassPoulina.TraceServer.Api" style="display: none"><td class="IconInfoEncoded"><a name="Poulina.TraceServer.ApiMessage" /></td><td class="messageCell"><strong>Poulina.TraceServer.Api\Controllers\AttachmentsController.cs:
+        </strong><span>File successfully backed up as C:\Users\JRIBII-LAPTOP\Desktop\DEV 2026\Backup\Controllers\AttachmentsController.cs</span></td></tr><tr name="MessageRowClassPoulina.TraceServer.Api" style="display: none"><td class="IconInfoEncoded"><a name="Poulina.TraceServer.ApiMessage" /></td><td class="messageCell"><strong>Poulina.TraceServer.Api\Controllers\CommentsController.cs:
+        </strong><span>File successfully backed up as C:\Users\JRIBII-LAPTOP\Desktop\DEV 2026\Backup\Controllers\CommentsController.cs</span></td></tr><tr name="MessageRowClassPoulina.TraceServer.Api" style="display: none"><td class="IconInfoEncoded"><a name="Poulina.TraceServer.ApiMessage" /></td><td class="messageCell"><strong>Poulina.TraceServer.Api\Controllers\DashboardController.cs:
+        </strong><span>File successfully backed up as C:\Users\JRIBII-LAPTOP\Desktop\DEV 2026\Backup\Controllers\DashboardController.cs</span></td></tr><tr name="MessageRowClassPoulina.TraceServer.Api" style="display: none"><td class="IconInfoEncoded"><a name="Poulina.TraceServer.ApiMessage" /></td><td class="messageCell"><strong>Poulina.TraceServer.Api\Controllers\IssuesController.cs:
+        </strong><span>File successfully backed up as C:\Users\JRIBII-LAPTOP\Desktop\DEV 2026\Backup\Controllers\IssuesController.cs</span></td></tr><tr name="MessageRowClassPoulina.TraceServer.Api" style="display: none"><td class="IconInfoEncoded"><a name="Poulina.TraceServer.ApiMessage" /></td><td class="messageCell"><strong>Poulina.TraceServer.Api\Controllers\NotificationsController.cs:
+        </strong><span>File successfully backed up as C:\Users\JRIBII-LAPTOP\Desktop\DEV 2026\Backup\Controllers\NotificationsController.cs</span></td></tr><tr name="MessageRowClassPoulina.TraceServer.Api" style="display: none"><td class="IconInfoEncoded"><a name="Poulina.TraceServer.ApiMessage" /></td><td class="messageCell"><strong>Poulina.TraceServer.Api\Controllers\ProjectExecutionController.cs:
+        </strong><span>File successfully backed up as C:\Users\JRIBII-LAPTOP\Desktop\DEV 2026\Backup\Controllers\ProjectExecutionController.cs</span></td></tr><tr name="MessageRowClassPoulina.TraceServer.Api" style="display: none"><td class="IconInfoEncoded"><a name="Poulina.TraceServer.ApiMessage" /></td><td class="messageCell"><strong>Poulina.TraceServer.Api\Controllers\ProjectMembersController.cs:
+        </strong><span>File successfully backed up as C:\Users\JRIBII-LAPTOP\Desktop\DEV 2026\Backup\Controllers\ProjectMembersController.cs</span></td></tr><tr name="MessageRowClassPoulina.TraceServer.Api" style="display: none"><td class="IconInfoEncoded"><a name="Poulina.TraceServer.ApiMessage" /></td><td class="messageCell"><strong>Poulina.TraceServer.Api\Controllers\ProjectsController.cs:
+        </strong><span>File successfully backed up as C:\Users\JRIBII-LAPTOP\Desktop\DEV 2026\Backup\Controllers\ProjectsController.cs</span></td></tr><tr name="MessageRowClassPoulina.TraceServer.Api" style="display: none"><td class="IconInfoEncoded"><a name="Poulina.TraceServer.ApiMessage" /></td><td class="messageCell"><strong>Poulina.TraceServer.Api\Controllers\SprintsController.cs:
+        </strong><span>File successfully backed up as C:\Users\JRIBII-LAPTOP\Desktop\DEV 2026\Backup\Controllers\SprintsController.cs</span></td></tr><tr name="MessageRowClassPoulina.TraceServer.Api" style="display: none"><td class="IconInfoEncoded"><a name="Poulina.TraceServer.ApiMessage" /></td><td class="messageCell"><strong>Poulina.TraceServer.Api\Controllers\UserController.cs:
+        </strong><span>File successfully backed up as C:\Users\JRIBII-LAPTOP\Desktop\DEV 2026\Backup\Controllers\UserController.cs</span></td></tr><tr name="MessageRowClassPoulina.TraceServer.Api" style="display: none"><td class="IconInfoEncoded"><a name="Poulina.TraceServer.ApiMessage" /></td><td class="messageCell"><strong>Poulina.TraceServer.Api\Controllers\UserStoriesController.cs:
+        </strong><span>File successfully backed up as C:\Users\JRIBII-LAPTOP\Desktop\DEV 2026\Backup\Controllers\UserStoriesController.cs</span></td></tr><tr name="MessageRowClassPoulina.TraceServer.Api" style="display: none"><td class="IconInfoEncoded"><a name="Poulina.TraceServer.ApiMessage" /></td><td class="messageCell"><strong>Poulina.TraceServer.Api\Dtos\CreateProjectDto.cs:
+        </strong><span>File successfully backed up as C:\Users\JRIBII-LAPTOP\Desktop\DEV 2026\Backup\Dtos\CreateProjectDto.cs</span></td></tr><tr name="MessageRowClassPoulina.TraceServer.Api" style="display: none"><td class="IconInfoEncoded"><a name="Poulina.TraceServer.ApiMessage" /></td><td class="messageCell"><strong>Poulina.TraceServer.Api\Dtos\LoginRequestDto.cs:
+        </strong><span>File successfully backed up as C:\Users\JRIBII-LAPTOP\Desktop\DEV 2026\Backup\Dtos\LoginRequestDto.cs</span></td></tr><tr name="MessageRowClassPoulina.TraceServer.Api" style="display: none"><td class="IconInfoEncoded"><a name="Poulina.TraceServer.ApiMessage" /></td><td class="messageCell"><strong>Poulina.TraceServer.Api\Dtos\ProjectResponseDto.cs:
+        </strong><span>File successfully backed up as C:\Users\JRIBII-LAPTOP\Desktop\DEV 2026\Backup\Dtos\ProjectResponseDto.cs</span></td></tr><tr name="MessageRowClassPoulina.TraceServer.Api" style="display: none"><td class="IconInfoEncoded"><a name="Poulina.TraceServer.ApiMessage" /></td><td class="messageCell"><strong>Poulina.TraceServer.Api\Dtos\RegisterUserDto.cs:
+        </strong><span>File successfully backed up as C:\Users\JRIBII-LAPTOP\Desktop\DEV 2026\Backup\Dtos\RegisterUserDto.cs</span></td></tr><tr name="MessageRowClassPoulina.TraceServer.Api" style="display: none"><td class="IconInfoEncoded"><a name="Poulina.TraceServer.ApiMessage" /></td><td class="messageCell"><strong>Poulina.TraceServer.Api\Dtos\UserResponseDto.cs:
+        </strong><span>File successfully backed up as C:\Users\JRIBII-LAPTOP\Desktop\DEV 2026\Backup\Dtos\UserResponseDto.cs</span></td></tr><tr name="MessageRowClassPoulina.TraceServer.Api" style="display: none"><td class="IconInfoEncoded"><a name="Poulina.TraceServer.ApiMessage" /></td><td class="messageCell"><strong>Poulina.TraceServer.Api\Hubs\BoardHub.cs:
+        </strong><span>File successfully backed up as C:\Users\JRIBII-LAPTOP\Desktop\DEV 2026\Backup\Hubs\BoardHub.cs</span></td></tr><tr name="MessageRowClassPoulina.TraceServer.Api" style="display: none"><td class="IconInfoEncoded"><a name="Poulina.TraceServer.ApiMessage" /></td><td class="messageCell"><strong>Poulina.TraceServer.Api\Mapper\MappingProfiles.cs:
+        </strong><span>File successfully backed up as C:\Users\JRIBII-LAPTOP\Desktop\DEV 2026\Backup\Mapper\MappingProfiles.cs</span></td></tr><tr name="MessageRowClassPoulina.TraceServer.Api" style="display: none"><td class="IconInfoEncoded"><a name="Poulina.TraceServer.ApiMessage" /></td><td class="messageCell"><strong>Poulina.TraceServer.Api\Middleware\ExceptionHandlingMiddleware.cs:
+        </strong><span>File successfully backed up as C:\Users\JRIBII-LAPTOP\Desktop\DEV 2026\Backup\Middleware\ExceptionHandlingMiddleware.cs</span></td></tr><tr name="MessageRowClassPoulina.TraceServer.Api" style="display: none"><td class="IconInfoEncoded"><a name="Poulina.TraceServer.ApiMessage" /></td><td class="messageCell"><strong>Poulina.TraceServer.Api\Program.cs:
+        </strong><span>File successfully backed up as C:\Users\JRIBII-LAPTOP\Desktop\DEV 2026\Backup\Program.cs</span></td></tr><tr name="MessageRowClassPoulina.TraceServer.Api" style="display: none"><td class="IconInfoEncoded"><a name="Poulina.TraceServer.ApiMessage" /></td><td class="messageCell"><strong>Poulina.TraceServer.Api\Services\ActivityService.cs:
+        </strong><span>File successfully backed up as C:\Users\JRIBII-LAPTOP\Desktop\DEV 2026\Backup\Services\ActivityService.cs</span></td></tr><tr name="MessageRowClassPoulina.TraceServer.Api" style="display: none"><td class="IconInfoEncoded"><a name="Poulina.TraceServer.ApiMessage" /></td><td class="messageCell"><strong>Poulina.TraceServer.Api\Services\CurrentUserService.cs:
+        </strong><span>File successfully backed up as C:\Users\JRIBII-LAPTOP\Desktop\DEV 2026\Backup\Services\CurrentUserService.cs</span></td></tr><tr name="MessageRowClassPoulina.TraceServer.Api" style="display: none"><td class="IconInfoEncoded"><a name="Poulina.TraceServer.ApiMessage" /></td><td class="messageCell"><strong>Poulina.TraceServer.Api\Services\IActivityService.cs:
+        </strong><span>File successfully backed up as C:\Users\JRIBII-LAPTOP\Desktop\DEV 2026\Backup\Services\IActivityService.cs</span></td></tr><tr name="MessageRowClassPoulina.TraceServer.Api" style="display: none"><td class="IconInfoEncoded"><a name="Poulina.TraceServer.ApiMessage" /></td><td class="messageCell"><strong>Poulina.TraceServer.Api\Services\ICurrentUserService.cs:
+        </strong><span>File successfully backed up as C:\Users\JRIBII-LAPTOP\Desktop\DEV 2026\Backup\Services\ICurrentUserService.cs</span></td></tr><tr name="MessageRowClassPoulina.TraceServer.Api" style="display: none"><td class="IconInfoEncoded"><a name="Poulina.TraceServer.ApiMessage" /></td><td class="messageCell"><strong>Poulina.TraceServer.Api\Services\IProjectAnalyticsService.cs:
+        </strong><span>File successfully backed up as C:\Users\JRIBII-LAPTOP\Desktop\DEV 2026\Backup\Services\IProjectAnalyticsService.cs</span></td></tr><tr name="MessageRowClassPoulina.TraceServer.Api" style="display: none"><td class="IconInfoEncoded"><a name="Poulina.TraceServer.ApiMessage" /></td><td class="messageCell"><strong>Poulina.TraceServer.Api\Services\IProjectAuthorizationService.cs:
+        </strong><span>File successfully backed up as C:\Users\JRIBII-LAPTOP\Desktop\DEV 2026\Backup\Services\IProjectAuthorizationService.cs</span></td></tr><tr name="MessageRowClassPoulina.TraceServer.Api" style="display: none"><td class="IconInfoEncoded"><a name="Poulina.TraceServer.ApiMessage" /></td><td class="messageCell"><strong>Poulina.TraceServer.Api\Services\ProjectAnalyticsService.cs:
+        </strong><span>File successfully backed up as C:\Users\JRIBII-LAPTOP\Desktop\DEV 2026\Backup\Services\ProjectAnalyticsService.cs</span></td></tr><tr name="MessageRowClassPoulina.TraceServer.Api" style="display: none"><td class="IconInfoEncoded"><a name="Poulina.TraceServer.ApiMessage" /></td><td class="messageCell"><strong>Poulina.TraceServer.Api\Services\ProjectAuthorizationService.cs:
+        </strong><span>File successfully backed up as C:\Users\JRIBII-LAPTOP\Desktop\DEV 2026\Backup\Services\ProjectAuthorizationService.cs</span></td></tr><tr name="MessageRowClassPoulina.TraceServer.Api" style="display: none"><td class="IconInfoEncoded"><a name="Poulina.TraceServer.ApiMessage" /></td><td class="messageCell"><strong>Poulina.TraceServer.Api\Properties\launchSettings.json:
+        </strong><span>File successfully backed up as C:\Users\JRIBII-LAPTOP\Desktop\DEV 2026\Backup\Properties\launchSettings.json</span></td></tr><tr name="MessageRowClassPoulina.TraceServer.Api" style="display: none"><td class="IconInfoEncoded"><a name="Poulina.TraceServer.ApiMessage" /></td><td class="messageCell"><strong>Poulina.TraceServer.Api\appsettings.Development.json:
+        </strong><span>File successfully backed up as C:\Users\JRIBII-LAPTOP\Desktop\DEV 2026\Backup\appsettings.Development.json</span></td></tr><tr name="MessageRowClassPoulina.TraceServer.Api" style="display: none"><td class="IconInfoEncoded"><a name="Poulina.TraceServer.ApiMessage" /></td><td class="messageCell"><strong>Poulina.TraceServer.Api\appsettings.json:
+        </strong><span>File successfully backed up as C:\Users\JRIBII-LAPTOP\Desktop\DEV 2026\Backup\appsettings.json</span></td></tr><tr name="MessageRowClassPoulina.TraceServer.Api" style="display: none"><td class="IconInfoEncoded"><a name="Poulina.TraceServer.ApiMessage" /></td><td class="messageCell"><strong>Poulina.TraceServer.Api\appsettings.Development.json:
+        </strong><span>Backup file name conflict.  Renaming file to:  C:\Users\JRIBII-LAPTOP\Desktop\DEV 2026\Backup\appsettings.Development(2).json</span></td></tr><tr name="MessageRowClassPoulina.TraceServer.Api" style="display: none"><td class="IconInfoEncoded"><a name="Poulina.TraceServer.ApiMessage" /></td><td class="messageCell"><strong>Poulina.TraceServer.Api\appsettings.Development.json:
+        </strong><span>File successfully backed up as C:\Users\JRIBII-LAPTOP\Desktop\DEV 2026\Backup\appsettings.Development(2).json</span></td></tr><tr name="MessageRowClassPoulina.TraceServer.Api" style="display: none"><td class="IconInfoEncoded"><a name="Poulina.TraceServer.ApiMessage" /></td><td class="messageCell"><strong>Poulina.TraceServer.Api\appsettings.json:
+        </strong><span>Backup file name conflict.  Renaming file to:  C:\Users\JRIBII-LAPTOP\Desktop\DEV 2026\Backup\appsettings(2).json</span></td></tr><tr name="MessageRowClassPoulina.TraceServer.Api" style="display: none"><td class="IconInfoEncoded"><a name="Poulina.TraceServer.ApiMessage" /></td><td class="messageCell"><strong>Poulina.TraceServer.Api\appsettings.json:
+        </strong><span>File successfully backed up as C:\Users\JRIBII-LAPTOP\Desktop\DEV 2026\Backup\appsettings(2).json</span></td></tr><tr name="MessageRowClassPoulina.TraceServer.Api" style="display: none"><td class="IconInfoEncoded"><a name="Poulina.TraceServer.ApiMessage" /></td><td class="messageCell"><strong>Poulina.TraceServer.Api\Poulina.TraceServer.Api.csproj:
+        </strong><span>Project migrated successfully</span></td></tr><tr style="display: none" name="MessageRowHeaderHidePoulina.TraceServer.Api"><td class="IconInfoEncoded" /><td class="messageCell"><a _locID="HideAdditionalMessages" href="#" name="Poulina.TraceServer.ApiMessage" onclick="ToggleMessageVisibility('Poulina.TraceServer.Api'); return false;">
+          Hide 39 additional messages
+        </a></td></tr></table><a name="TraceServer.Data" /><h3>TraceServer.Data</h3><table><tr id="TraceServer.DataHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Message</th></tr><tr name="ErrorRowClassTraceServer.Data"><td class="IconErrorEncoded"><a name="TraceServer.DataError" /></td><td class="messageCell"><strong>TraceServer.Data\App.xaml:
+        </strong><span>Failed to backup file as C:\Users\JRIBII-LAPTOP\Desktop\DEV 2026\Backup\App.xaml</span></td></tr><tr name="ErrorRowClassTraceServer.Data"><td class="IconErrorEncoded"><a name="TraceServer.DataError" /></td><td class="messageCell"><strong>TraceServer.Data\Application.xaml:
+        </strong><span>Failed to backup file as C:\Users\JRIBII-LAPTOP\Desktop\DEV 2026\Backup\Application.xaml</span></td></tr><tr name="MessageRowHeaderShowTraceServer.Data"><td class="IconInfoEncoded" /><td class="messageCell"><a _locID="ShowAdditionalMessages" href="#" name="TraceServer.DataMessage" onclick="ToggleMessageVisibility('TraceServer.Data'); return false;">
+          Show 11 additional messages
+        </a></td></tr><tr name="MessageRowClassTraceServer.Data" style="display: none"><td class="IconInfoEncoded"><a name="TraceServer.DataMessage" /></td><td class="messageCell"><strong>TraceServer.Data\TraceServer.Data.csproj:
+        </strong><span>Project file successfully backed up as C:\Users\JRIBII-LAPTOP\Desktop\DEV 2026\Backup\TraceServer.Data.csproj</span></td></tr><tr name="MessageRowClassTraceServer.Data" style="display: none"><td class="IconInfoEncoded"><a name="TraceServer.DataMessage" /></td><td class="messageCell"><strong>TraceServer.Data\Context\AppDbContext.cs:
+        </strong><span>File successfully backed up as C:\Users\JRIBII-LAPTOP\Desktop\DEV 2026\Backup\Context\AppDbContext.cs</span></td></tr><tr name="MessageRowClassTraceServer.Data" style="display: none"><td class="IconInfoEncoded"><a name="TraceServer.DataMessage" /></td><td class="messageCell"><strong>TraceServer.Data\Migrations\20260423235921_firstSchema.cs:
+        </strong><span>File successfully backed up as C:\Users\JRIBII-LAPTOP\Desktop\DEV 2026\Backup\Migrations\20260423235921_firstSchema.cs</span></td></tr><tr name="MessageRowClassTraceServer.Data" style="display: none"><td class="IconInfoEncoded"><a name="TraceServer.DataMessage" /></td><td class="messageCell"><strong>TraceServer.Data\Migrations\20260423235921_firstSchema.Designer.cs:
+        </strong><span>File successfully backed up as C:\Users\JRIBII-LAPTOP\Desktop\DEV 2026\Backup\Migrations\20260423235921_firstSchema.Designer.cs</span></td></tr><tr name="MessageRowClassTraceServer.Data" style="display: none"><td class="IconInfoEncoded"><a name="TraceServer.DataMessage" /></td><td class="messageCell"><strong>TraceServer.Data\Migrations\20260424000733_fixUserRelations.cs:
+        </strong><span>File successfully backed up as C:\Users\JRIBII-LAPTOP\Desktop\DEV 2026\Backup\Migrations\20260424000733_fixUserRelations.cs</span></td></tr><tr name="MessageRowClassTraceServer.Data" style="display: none"><td class="IconInfoEncoded"><a name="TraceServer.DataMessage" /></td><td class="messageCell"><strong>TraceServer.Data\Migrations\20260424000733_fixUserRelations.Designer.cs:
+        </strong><span>File successfully backed up as C:\Users\JRIBII-LAPTOP\Desktop\DEV 2026\Backup\Migrations\20260424000733_fixUserRelations.Designer.cs</span></td></tr><tr name="MessageRowClassTraceServer.Data" style="display: none"><td class="IconInfoEncoded"><a name="TraceServer.DataMessage" /></td><td class="messageCell"><strong>TraceServer.Data\Migrations\20260424013348_fixAttributes.cs:
+        </strong><span>File successfully backed up as C:\Users\JRIBII-LAPTOP\Desktop\DEV 2026\Backup\Migrations\20260424013348_fixAttributes.cs</span></td></tr><tr name="MessageRowClassTraceServer.Data" style="display: none"><td class="IconInfoEncoded"><a name="TraceServer.DataMessage" /></td><td class="messageCell"><strong>TraceServer.Data\Migrations\20260424013348_fixAttributes.Designer.cs:
+        </strong><span>File successfully backed up as C:\Users\JRIBII-LAPTOP\Desktop\DEV 2026\Backup\Migrations\20260424013348_fixAttributes.Designer.cs</span></td></tr><tr name="MessageRowClassTraceServer.Data" style="display: none"><td class="IconInfoEncoded"><a name="TraceServer.DataMessage" /></td><td class="messageCell"><strong>TraceServer.Data\Migrations\AppDbContextModelSnapshot.cs:
+        </strong><span>File successfully backed up as C:\Users\JRIBII-LAPTOP\Desktop\DEV 2026\Backup\Migrations\AppDbContextModelSnapshot.cs</span></td></tr><tr name="MessageRowClassTraceServer.Data" style="display: none"><td class="IconInfoEncoded"><a name="TraceServer.DataMessage" /></td><td class="messageCell"><strong>TraceServer.Data\Repository\GenericRepository.cs:
+        </strong><span>File successfully backed up as C:\Users\JRIBII-LAPTOP\Desktop\DEV 2026\Backup\Repository\GenericRepository.cs</span></td></tr><tr name="MessageRowClassTraceServer.Data" style="display: none"><td class="IconInfoEncoded"><a name="TraceServer.DataMessage" /></td><td class="messageCell"><strong>TraceServer.Data\TraceServer.Data.csproj:
+        </strong><span>Project migrated successfully</span></td></tr><tr style="display: none" name="MessageRowHeaderHideTraceServer.Data"><td class="IconInfoEncoded" /><td class="messageCell"><a _locID="HideAdditionalMessages" href="#" name="TraceServer.DataMessage" onclick="ToggleMessageVisibility('TraceServer.Data'); return false;">
+          Hide 11 additional messages
+        </a></td></tr></table><a name="TraceServer.Domain" /><h3>TraceServer.Domain</h3><table><tr id="TraceServer.DomainHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Message</th></tr><tr name="ErrorRowClassTraceServer.Domain"><td class="IconErrorEncoded"><a name="TraceServer.DomainError" /></td><td class="messageCell"><strong>TraceServer.Domain\App.xaml:
+        </strong><span>Failed to backup file as C:\Users\JRIBII-LAPTOP\Desktop\DEV 2026\Backup\App.xaml</span></td></tr><tr name="ErrorRowClassTraceServer.Domain"><td class="IconErrorEncoded"><a name="TraceServer.DomainError" /></td><td class="messageCell"><strong>TraceServer.Domain\Application.xaml:
+        </strong><span>Failed to backup file as C:\Users\JRIBII-LAPTOP\Desktop\DEV 2026\Backup\Application.xaml</span></td></tr><tr name="MessageRowHeaderShowTraceServer.Domain"><td class="IconInfoEncoded" /><td class="messageCell"><a _locID="ShowAdditionalMessages" href="#" name="TraceServer.DomainMessage" onclick="ToggleMessageVisibility('TraceServer.Domain'); return false;">
+          Show 55 additional messages
+        </a></td></tr><tr name="MessageRowClassTraceServer.Domain" style="display: none"><td class="IconInfoEncoded"><a name="TraceServer.DomainMessage" /></td><td class="messageCell"><strong>TraceServer.Domain\TraceServer.Domain.csproj:
+        </strong><span>Project file successfully backed up as C:\Users\JRIBII-LAPTOP\Desktop\DEV 2026\Backup\TraceServer.Domain.csproj</span></td></tr><tr name="MessageRowClassTraceServer.Domain" style="display: none"><td class="IconInfoEncoded"><a name="TraceServer.DomainMessage" /></td><td class="messageCell"><strong>TraceServer.Domain\Commands\AddGenericCommand.cs:
+        </strong><span>File successfully backed up as C:\Users\JRIBII-LAPTOP\Desktop\DEV 2026\Backup\Commands\AddGenericCommand.cs</span></td></tr><tr name="MessageRowClassTraceServer.Domain" style="display: none"><td class="IconInfoEncoded"><a name="TraceServer.DomainMessage" /></td><td class="messageCell"><strong>TraceServer.Domain\Commands\AutoAssignCommand.cs:
+        </strong><span>File successfully backed up as C:\Users\JRIBII-LAPTOP\Desktop\DEV 2026\Backup\Commands\AutoAssignCommand.cs</span></td></tr><tr name="MessageRowClassTraceServer.Domain" style="display: none"><td class="IconInfoEncoded"><a name="TraceServer.DomainMessage" /></td><td class="messageCell"><strong>TraceServer.Domain\Commands\GenerateDescriptionCommand.cs:
+        </strong><span>File successfully backed up as C:\Users\JRIBII-LAPTOP\Desktop\DEV 2026\Backup\Commands\GenerateDescriptionCommand.cs</span></td></tr><tr name="MessageRowClassTraceServer.Domain" style="display: none"><td class="IconInfoEncoded"><a name="TraceServer.DomainMessage" /></td><td class="messageCell"><strong>TraceServer.Domain\Commands\PredictPriorityCommand.cs:
+        </strong><span>File successfully backed up as C:\Users\JRIBII-LAPTOP\Desktop\DEV 2026\Backup\Commands\PredictPriorityCommand.cs</span></td></tr><tr name="MessageRowClassTraceServer.Domain" style="display: none"><td class="IconInfoEncoded"><a name="TraceServer.DomainMessage" /></td><td class="messageCell"><strong>TraceServer.Domain\Commands\PutGenericCommand.cs:
+        </strong><span>File successfully backed up as C:\Users\JRIBII-LAPTOP\Desktop\DEV 2026\Backup\Commands\PutGenericCommand.cs</span></td></tr><tr name="MessageRowClassTraceServer.Domain" style="display: none"><td class="IconInfoEncoded"><a name="TraceServer.DomainMessage" /></td><td class="messageCell"><strong>TraceServer.Domain\Commands\RemoveGenericCommand.cs:
+        </strong><span>File successfully backed up as C:\Users\JRIBII-LAPTOP\Desktop\DEV 2026\Backup\Commands\RemoveGenericCommand.cs</span></td></tr><tr name="MessageRowClassTraceServer.Domain" style="display: none"><td class="IconInfoEncoded"><a name="TraceServer.DomainMessage" /></td><td class="messageCell"><strong>TraceServer.Domain\Commands\WorkflowCommands.cs:
+        </strong><span>File successfully backed up as C:\Users\JRIBII-LAPTOP\Desktop\DEV 2026\Backup\Commands\WorkflowCommands.cs</span></td></tr><tr name="MessageRowClassTraceServer.Domain" style="display: none"><td class="IconInfoEncoded"><a name="TraceServer.DomainMessage" /></td><td class="messageCell"><strong>TraceServer.Domain\Dto\AiDtos.cs:
+        </strong><span>File successfully backed up as C:\Users\JRIBII-LAPTOP\Desktop\DEV 2026\Backup\Dto\AiDtos.cs</span></td></tr><tr name="MessageRowClassTraceServer.Domain" style="display: none"><td class="IconInfoEncoded"><a name="TraceServer.DomainMessage" /></td><td class="messageCell"><strong>TraceServer.Domain\Dto\ApiErrorResponse.cs:
+        </strong><span>File successfully backed up as C:\Users\JRIBII-LAPTOP\Desktop\DEV 2026\Backup\Dto\ApiErrorResponse.cs</span></td></tr><tr name="MessageRowClassTraceServer.Domain" style="display: none"><td class="IconInfoEncoded"><a name="TraceServer.DomainMessage" /></td><td class="messageCell"><strong>TraceServer.Domain\Dto\AuthDtos.cs:
+        </strong><span>File successfully backed up as C:\Users\JRIBII-LAPTOP\Desktop\DEV 2026\Backup\Dto\AuthDtos.cs</span></td></tr><tr name="MessageRowClassTraceServer.Domain" style="display: none"><td class="IconInfoEncoded"><a name="TraceServer.DomainMessage" /></td><td class="messageCell"><strong>TraceServer.Domain\Dto\CollaborationDtos.cs:
+        </strong><span>File successfully backed up as C:\Users\JRIBII-LAPTOP\Desktop\DEV 2026\Backup\Dto\CollaborationDtos.cs</span></td></tr><tr name="MessageRowClassTraceServer.Domain" style="display: none"><td class="IconInfoEncoded"><a name="TraceServer.DomainMessage" /></td><td class="messageCell"><strong>TraceServer.Domain\Dto\DashboardDtos.cs:
+        </strong><span>File successfully backed up as C:\Users\JRIBII-LAPTOP\Desktop\DEV 2026\Backup\Dto\DashboardDtos.cs</span></td></tr><tr name="MessageRowClassTraceServer.Domain" style="display: none"><td class="IconInfoEncoded"><a name="TraceServer.DomainMessage" /></td><td class="messageCell"><strong>TraceServer.Domain\Dto\ExecutionDto.cs:
+        </strong><span>File successfully backed up as C:\Users\JRIBII-LAPTOP\Desktop\DEV 2026\Backup\Dto\ExecutionDto.cs</span></td></tr><tr name="MessageRowClassTraceServer.Domain" style="display: none"><td class="IconInfoEncoded"><a name="TraceServer.DomainMessage" /></td><td class="messageCell"><strong>TraceServer.Domain\Dto\IssueDtos.cs:
+        </strong><span>File successfully backed up as C:\Users\JRIBII-LAPTOP\Desktop\DEV 2026\Backup\Dto\IssueDtos.cs</span></td></tr><tr name="MessageRowClassTraceServer.Domain" style="display: none"><td class="IconInfoEncoded"><a name="TraceServer.DomainMessage" /></td><td class="messageCell"><strong>TraceServer.Domain\Dto\NotificationDtos.cs:
+        </strong><span>File successfully backed up as C:\Users\JRIBII-LAPTOP\Desktop\DEV 2026\Backup\Dto\NotificationDtos.cs</span></td></tr><tr name="MessageRowClassTraceServer.Domain" style="display: none"><td class="IconInfoEncoded"><a name="TraceServer.DomainMessage" /></td><td class="messageCell"><strong>TraceServer.Domain\Dto\PlanningDto.cs:
+        </strong><span>File successfully backed up as C:\Users\JRIBII-LAPTOP\Desktop\DEV 2026\Backup\Dto\PlanningDto.cs</span></td></tr><tr name="MessageRowClassTraceServer.Domain" style="display: none"><td class="IconInfoEncoded"><a name="TraceServer.DomainMessage" /></td><td class="messageCell"><strong>TraceServer.Domain\Dto\ProjectDtos.cs:
+        </strong><span>File successfully backed up as C:\Users\JRIBII-LAPTOP\Desktop\DEV 2026\Backup\Dto\ProjectDtos.cs</span></td></tr><tr name="MessageRowClassTraceServer.Domain" style="display: none"><td class="IconInfoEncoded"><a name="TraceServer.DomainMessage" /></td><td class="messageCell"><strong>TraceServer.Domain\Dto\ProjectMemberDtos.cs:
+        </strong><span>File successfully backed up as C:\Users\JRIBII-LAPTOP\Desktop\DEV 2026\Backup\Dto\ProjectMemberDtos.cs</span></td></tr><tr name="MessageRowClassTraceServer.Domain" style="display: none"><td class="IconInfoEncoded"><a name="TraceServer.DomainMessage" /></td><td class="messageCell"><strong>TraceServer.Domain\Dto\SprintDtos.cs:
+        </strong><span>File successfully backed up as C:\Users\JRIBII-LAPTOP\Desktop\DEV 2026\Backup\Dto\SprintDtos.cs</span></td></tr><tr name="MessageRowClassTraceServer.Domain" style="display: none"><td class="IconInfoEncoded"><a name="TraceServer.DomainMessage" /></td><td class="messageCell"><strong>TraceServer.Domain\Dto\TeamProjectDto.cs:
+        </strong><span>File successfully backed up as C:\Users\JRIBII-LAPTOP\Desktop\DEV 2026\Backup\Dto\TeamProjectDto.cs</span></td></tr><tr name="MessageRowClassTraceServer.Domain" style="display: none"><td class="IconInfoEncoded"><a name="TraceServer.DomainMessage" /></td><td class="messageCell"><strong>TraceServer.Domain\Dto\TokenApiDto.cs:
+        </strong><span>File successfully backed up as C:\Users\JRIBII-LAPTOP\Desktop\DEV 2026\Backup\Dto\TokenApiDto.cs</span></td></tr><tr name="MessageRowClassTraceServer.Domain" style="display: none"><td class="IconInfoEncoded"><a name="TraceServer.DomainMessage" /></td><td class="messageCell"><strong>TraceServer.Domain\Dto\UserStoryDtos.cs:
+        </strong><span>File successfully backed up as C:\Users\JRIBII-LAPTOP\Desktop\DEV 2026\Backup\Dto\UserStoryDtos.cs</span></td></tr><tr name="MessageRowClassTraceServer.Domain" style="display: none"><td class="IconInfoEncoded"><a name="TraceServer.DomainMessage" /></td><td class="messageCell"><strong>TraceServer.Domain\Exceptions\BusinessValidationException.cs:
+        </strong><span>File successfully backed up as C:\Users\JRIBII-LAPTOP\Desktop\DEV 2026\Backup\Exceptions\BusinessValidationException.cs</span></td></tr><tr name="MessageRowClassTraceServer.Domain" style="display: none"><td class="IconInfoEncoded"><a name="TraceServer.DomainMessage" /></td><td class="messageCell"><strong>TraceServer.Domain\Exceptions\ResourceConflictException.cs:
+        </strong><span>File successfully backed up as C:\Users\JRIBII-LAPTOP\Desktop\DEV 2026\Backup\Exceptions\ResourceConflictException.cs</span></td></tr><tr name="MessageRowClassTraceServer.Domain" style="display: none"><td class="IconInfoEncoded"><a name="TraceServer.DomainMessage" /></td><td class="messageCell"><strong>TraceServer.Domain\Handlers\AddGenericHandler.cs:
+        </strong><span>File successfully backed up as C:\Users\JRIBII-LAPTOP\Desktop\DEV 2026\Backup\Handlers\AddGenericHandler.cs</span></td></tr><tr name="MessageRowClassTraceServer.Domain" style="display: none"><td class="IconInfoEncoded"><a name="TraceServer.DomainMessage" /></td><td class="messageCell"><strong>TraceServer.Domain\Handlers\AutoAssignHandler.cs:
+        </strong><span>File successfully backed up as C:\Users\JRIBII-LAPTOP\Desktop\DEV 2026\Backup\Handlers\AutoAssignHandler.cs</span></td></tr><tr name="MessageRowClassTraceServer.Domain" style="display: none"><td class="IconInfoEncoded"><a name="TraceServer.DomainMessage" /></td><td class="messageCell"><strong>TraceServer.Domain\Handlers\GenerateDescriptionHandler.cs:
+        </strong><span>File successfully backed up as C:\Users\JRIBII-LAPTOP\Desktop\DEV 2026\Backup\Handlers\GenerateDescriptionHandler.cs</span></td></tr><tr name="MessageRowClassTraceServer.Domain" style="display: none"><td class="IconInfoEncoded"><a name="TraceServer.DomainMessage" /></td><td class="messageCell"><strong>TraceServer.Domain\Handlers\GetGenericHandler.cs:
+        </strong><span>File successfully backed up as C:\Users\JRIBII-LAPTOP\Desktop\DEV 2026\Backup\Handlers\GetGenericHandler.cs</span></td></tr><tr name="MessageRowClassTraceServer.Domain" style="display: none"><td class="IconInfoEncoded"><a name="TraceServer.DomainMessage" /></td><td class="messageCell"><strong>TraceServer.Domain\Handlers\GetListGenericHandler.cs:
+        </strong><span>File successfully backed up as C:\Users\JRIBII-LAPTOP\Desktop\DEV 2026\Backup\Handlers\GetListGenericHandler.cs</span></td></tr><tr name="MessageRowClassTraceServer.Domain" style="display: none"><td class="IconInfoEncoded"><a name="TraceServer.DomainMessage" /></td><td class="messageCell"><strong>TraceServer.Domain\Handlers\PredictPriorityHandler.cs:
+        </strong><span>File successfully backed up as C:\Users\JRIBII-LAPTOP\Desktop\DEV 2026\Backup\Handlers\PredictPriorityHandler.cs</span></td></tr><tr name="MessageRowClassTraceServer.Domain" style="display: none"><td class="IconInfoEncoded"><a name="TraceServer.DomainMessage" /></td><td class="messageCell"><strong>TraceServer.Domain\Handlers\PredictVelocityHandler.cs:
+        </strong><span>File successfully backed up as C:\Users\JRIBII-LAPTOP\Desktop\DEV 2026\Backup\Handlers\PredictVelocityHandler.cs</span></td></tr><tr name="MessageRowClassTraceServer.Domain" style="display: none"><td class="IconInfoEncoded"><a name="TraceServer.DomainMessage" /></td><td class="messageCell"><strong>TraceServer.Domain\Handlers\PutGenericHandler.cs:
+        </strong><span>File successfully backed up as C:\Users\JRIBII-LAPTOP\Desktop\DEV 2026\Backup\Handlers\PutGenericHandler.cs</span></td></tr><tr name="MessageRowClassTraceServer.Domain" style="display: none"><td class="IconInfoEncoded"><a name="TraceServer.DomainMessage" /></td><td class="messageCell"><strong>TraceServer.Domain\Handlers\RemoveGenericHandler.cs:
+        </strong><span>File successfully backed up as C:\Users\JRIBII-LAPTOP\Desktop\DEV 2026\Backup\Handlers\RemoveGenericHandler.cs</span></td></tr><tr name="MessageRowClassTraceServer.Domain" style="display: none"><td class="IconInfoEncoded"><a name="TraceServer.DomainMessage" /></td><td class="messageCell"><strong>TraceServer.Domain\Handlers\WorkflowHandlers.cs:
+        </strong><span>File successfully backed up as C:\Users\JRIBII-LAPTOP\Desktop\DEV 2026\Backup\Handlers\WorkflowHandlers.cs</span></td></tr><tr name="MessageRowClassTraceServer.Domain" style="display: none"><td class="IconInfoEncoded"><a name="TraceServer.DomainMessage" /></td><td class="messageCell"><strong>TraceServer.Domain\Interfaces\IGenericRepository.cs:
+        </strong><span>File successfully backed up as C:\Users\JRIBII-LAPTOP\Desktop\DEV 2026\Backup\Interfaces\IGenericRepository.cs</span></td></tr><tr name="MessageRowClassTraceServer.Domain" style="display: none"><td class="IconInfoEncoded"><a name="TraceServer.DomainMessage" /></td><td class="messageCell"><strong>TraceServer.Domain\Models\AcceptanceCriterion.cs:
+        </strong><span>File successfully backed up as C:\Users\JRIBII-LAPTOP\Desktop\DEV 2026\Backup\Models\AcceptanceCriterion.cs</span></td></tr><tr name="MessageRowClassTraceServer.Domain" style="display: none"><td class="IconInfoEncoded"><a name="TraceServer.DomainMessage" /></td><td class="messageCell"><strong>TraceServer.Domain\Models\ActivityLog.cs:
+        </strong><span>File successfully backed up as C:\Users\JRIBII-LAPTOP\Desktop\DEV 2026\Backup\Models\ActivityLog.cs</span></td></tr><tr name="MessageRowClassTraceServer.Domain" style="display: none"><td class="IconInfoEncoded"><a name="TraceServer.DomainMessage" /></td><td class="messageCell"><strong>TraceServer.Domain\Models\AIPredictionLog.cs:
+        </strong><span>File successfully backed up as C:\Users\JRIBII-LAPTOP\Desktop\DEV 2026\Backup\Models\AIPredictionLog.cs</span></td></tr><tr name="MessageRowClassTraceServer.Domain" style="display: none"><td class="IconInfoEncoded"><a name="TraceServer.DomainMessage" /></td><td class="messageCell"><strong>TraceServer.Domain\Models\Attachment.cs:
+        </strong><span>File successfully backed up as C:\Users\JRIBII-LAPTOP\Desktop\DEV 2026\Backup\Models\Attachment.cs</span></td></tr><tr name="MessageRowClassTraceServer.Domain" style="display: none"><td class="IconInfoEncoded"><a name="TraceServer.DomainMessage" /></td><td class="messageCell"><strong>TraceServer.Domain\Models\Comment.cs:
+        </strong><span>File successfully backed up as C:\Users\JRIBII-LAPTOP\Desktop\DEV 2026\Backup\Models\Comment.cs</span></td></tr><tr name="MessageRowClassTraceServer.Domain" style="display: none"><td class="IconInfoEncoded"><a name="TraceServer.DomainMessage" /></td><td class="messageCell"><strong>TraceServer.Domain\Models\Epic.cs:
+        </strong><span>File successfully backed up as C:\Users\JRIBII-LAPTOP\Desktop\DEV 2026\Backup\Models\Epic.cs</span></td></tr><tr name="MessageRowClassTraceServer.Domain" style="display: none"><td class="IconInfoEncoded"><a name="TraceServer.DomainMessage" /></td><td class="messageCell"><strong>TraceServer.Domain\Models\Issue.cs:
+        </strong><span>File successfully backed up as C:\Users\JRIBII-LAPTOP\Desktop\DEV 2026\Backup\Models\Issue.cs</span></td></tr><tr name="MessageRowClassTraceServer.Domain" style="display: none"><td class="IconInfoEncoded"><a name="TraceServer.DomainMessage" /></td><td class="messageCell"><strong>TraceServer.Domain\Models\KanbanColumn.cs:
+        </strong><span>File successfully backed up as C:\Users\JRIBII-LAPTOP\Desktop\DEV 2026\Backup\Models\KanbanColumn.cs</span></td></tr><tr name="MessageRowClassTraceServer.Domain" style="display: none"><td class="IconInfoEncoded"><a name="TraceServer.DomainMessage" /></td><td class="messageCell"><strong>TraceServer.Domain\Models\Notification.cs:
+        </strong><span>File successfully backed up as C:\Users\JRIBII-LAPTOP\Desktop\DEV 2026\Backup\Models\Notification.cs</span></td></tr><tr name="MessageRowClassTraceServer.Domain" style="display: none"><td class="IconInfoEncoded"><a name="TraceServer.DomainMessage" /></td><td class="messageCell"><strong>TraceServer.Domain\Models\Project.cs:
+        </strong><span>File successfully backed up as C:\Users\JRIBII-LAPTOP\Desktop\DEV 2026\Backup\Models\Project.cs</span></td></tr><tr name="MessageRowClassTraceServer.Domain" style="display: none"><td class="IconInfoEncoded"><a name="TraceServer.DomainMessage" /></td><td class="messageCell"><strong>TraceServer.Domain\Models\ProjectMember.cs:
+        </strong><span>File successfully backed up as C:\Users\JRIBII-LAPTOP\Desktop\DEV 2026\Backup\Models\ProjectMember.cs</span></td></tr><tr name="MessageRowClassTraceServer.Domain" style="display: none"><td class="IconInfoEncoded"><a name="TraceServer.DomainMessage" /></td><td class="messageCell"><strong>TraceServer.Domain\Models\ScrumCeremony.cs:
+        </strong><span>File successfully backed up as C:\Users\JRIBII-LAPTOP\Desktop\DEV 2026\Backup\Models\ScrumCeremony.cs</span></td></tr><tr name="MessageRowClassTraceServer.Domain" style="display: none"><td class="IconInfoEncoded"><a name="TraceServer.DomainMessage" /></td><td class="messageCell"><strong>TraceServer.Domain\Models\Sprint.cs:
+        </strong><span>File successfully backed up as C:\Users\JRIBII-LAPTOP\Desktop\DEV 2026\Backup\Models\Sprint.cs</span></td></tr><tr name="MessageRowClassTraceServer.Domain" style="display: none"><td class="IconInfoEncoded"><a name="TraceServer.DomainMessage" /></td><td class="messageCell"><strong>TraceServer.Domain\Models\SubTask.cs:
+        </strong><span>File successfully backed up as C:\Users\JRIBII-LAPTOP\Desktop\DEV 2026\Backup\Models\SubTask.cs</span></td></tr><tr name="MessageRowClassTraceServer.Domain" style="display: none"><td class="IconInfoEncoded"><a name="TraceServer.DomainMessage" /></td><td class="messageCell"><strong>TraceServer.Domain\Models\User.cs:
+        </strong><span>File successfully backed up as C:\Users\JRIBII-LAPTOP\Desktop\DEV 2026\Backup\Models\User.cs</span></td></tr><tr name="MessageRowClassTraceServer.Domain" style="display: none"><td class="IconInfoEncoded"><a name="TraceServer.DomainMessage" /></td><td class="messageCell"><strong>TraceServer.Domain\Models\UserStory.cs:
+        </strong><span>File successfully backed up as C:\Users\JRIBII-LAPTOP\Desktop\DEV 2026\Backup\Models\UserStory.cs</span></td></tr><tr name="MessageRowClassTraceServer.Domain" style="display: none"><td class="IconInfoEncoded"><a name="TraceServer.DomainMessage" /></td><td class="messageCell"><strong>TraceServer.Domain\Queries\GetGenericQuery.cs:
+        </strong><span>File successfully backed up as C:\Users\JRIBII-LAPTOP\Desktop\DEV 2026\Backup\Queries\GetGenericQuery.cs</span></td></tr><tr name="MessageRowClassTraceServer.Domain" style="display: none"><td class="IconInfoEncoded"><a name="TraceServer.DomainMessage" /></td><td class="messageCell"><strong>TraceServer.Domain\Queries\GetListGenericQuery.cs:
+        </strong><span>File successfully backed up as C:\Users\JRIBII-LAPTOP\Desktop\DEV 2026\Backup\Queries\GetListGenericQuery.cs</span></td></tr><tr name="MessageRowClassTraceServer.Domain" style="display: none"><td class="IconInfoEncoded"><a name="TraceServer.DomainMessage" /></td><td class="messageCell"><strong>TraceServer.Domain\Queries\PredictVelocityQuery.cs:
+        </strong><span>File successfully backed up as C:\Users\JRIBII-LAPTOP\Desktop\DEV 2026\Backup\Queries\PredictVelocityQuery.cs</span></td></tr><tr style="display: none" name="MessageRowHeaderHideTraceServer.Domain"><td class="IconInfoEncoded" /><td class="messageCell"><a _locID="HideAdditionalMessages" href="#" name="TraceServer.DomainMessage" onclick="ToggleMessageVisibility('TraceServer.Domain'); return false;">
+          Hide 55 additional messages
+        </a></td></tr></table><a name="TraceServer.Ioc" /><h3>TraceServer.Ioc</h3><table><tr id="TraceServer.IocHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Message</th></tr><tr name="ErrorRowClassTraceServer.Ioc"><td class="IconErrorEncoded"><a name="TraceServer.IocError" /></td><td class="messageCell"><strong>TraceServer.Ioc\App.xaml:
+        </strong><span>Failed to backup file as C:\Users\JRIBII-LAPTOP\Desktop\DEV 2026\Backup\App.xaml</span></td></tr><tr name="ErrorRowClassTraceServer.Ioc"><td class="IconErrorEncoded"><a name="TraceServer.IocError" /></td><td class="messageCell"><strong>TraceServer.Ioc\Application.xaml:
+        </strong><span>Failed to backup file as C:\Users\JRIBII-LAPTOP\Desktop\DEV 2026\Backup\Application.xaml</span></td></tr><tr name="MessageRowHeaderShowTraceServer.Ioc"><td class="IconInfoEncoded" /><td class="messageCell"><a _locID="ShowAdditionalMessages" href="#" name="TraceServer.IocMessage" onclick="ToggleMessageVisibility('TraceServer.Ioc'); return false;">
+          Show 3 additional messages
+        </a></td></tr><tr name="MessageRowClassTraceServer.Ioc" style="display: none"><td class="IconInfoEncoded"><a name="TraceServer.IocMessage" /></td><td class="messageCell"><strong>TraceServer.Ioc\TraceServer.Ioc.csproj:
+        </strong><span>Project file successfully backed up as C:\Users\JRIBII-LAPTOP\Desktop\DEV 2026\Backup\TraceServer.Ioc.csproj</span></td></tr><tr name="MessageRowClassTraceServer.Ioc" style="display: none"><td class="IconInfoEncoded"><a name="TraceServer.IocMessage" /></td><td class="messageCell"><strong>TraceServer.Ioc\DependencyContainer.cs:
+        </strong><span>File successfully backed up as C:\Users\JRIBII-LAPTOP\Desktop\DEV 2026\Backup\DependencyContainer.cs</span></td></tr><tr name="MessageRowClassTraceServer.Ioc" style="display: none"><td class="IconInfoEncoded"><a name="TraceServer.IocMessage" /></td><td class="messageCell"><strong>TraceServer.Ioc\TraceServer.Ioc.csproj:
+        </strong><span>Project migrated successfully</span></td></tr><tr style="display: none" name="MessageRowHeaderHideTraceServer.Ioc"><td class="IconInfoEncoded" /><td class="messageCell"><a _locID="HideAdditionalMessages" href="#" name="TraceServer.IocMessage" onclick="ToggleMessageVisibility('TraceServer.Ioc'); return false;">
+          Hide 3 additional messages
+        </a></td></tr></table></div></div></body></html>

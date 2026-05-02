@@ -1,0 +1,57 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 18
+VisualStudioVersion = 18.3.11520.95 d18.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AGILE AI API", "AGILE AI API", "{23E35424-56A2-4D71-9C45-0FC5360F3C4F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgileAi.Api", "Poulina.TraceServer.Api\Poulina.TraceServer.Api.csproj", "{E19CB4E8-83AF-4850-8900-00A31E06C9EB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AGILE AI Data", "AGILE AI Data", "{315442BD-1551-4813-B6F1-4AF46AD27400}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgileAi.Data", "TraceServer.Data\TraceServer.Data.csproj", "{0AAE8C8A-60ED-4F2E-BE5D-D45C43A37BC8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AGILE AI Domain", "AGILE AI Domain", "{CBC93D81-59BD-4860-8A53-32A8F38E1C8D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgileAi.Domain", "TraceServer.Domain\TraceServer.Domain.csproj", "{F53A2A72-6739-4B22-8F43-64B36B88317B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AGILE AI IoC", "AGILE AI IoC", "{AFFDE190-BBD1-4308-AFAA-17E20973F817}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgileAi.Ioc", "TraceServer.Ioc\TraceServer.Ioc.csproj", "{434F27D4-DC9F-4E8C-B37A-223F90D5EF13}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0AAE8C8A-60ED-4F2E-BE5D-D45C43A37BC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0AAE8C8A-60ED-4F2E-BE5D-D45C43A37BC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0AAE8C8A-60ED-4F2E-BE5D-D45C43A37BC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0AAE8C8A-60ED-4F2E-BE5D-D45C43A37BC8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F53A2A72-6739-4B22-8F43-64B36B88317B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F53A2A72-6739-4B22-8F43-64B36B88317B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F53A2A72-6739-4B22-8F43-64B36B88317B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F53A2A72-6739-4B22-8F43-64B36B88317B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{434F27D4-DC9F-4E8C-B37A-223F90D5EF13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{434F27D4-DC9F-4E8C-B37A-223F90D5EF13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{434F27D4-DC9F-4E8C-B37A-223F90D5EF13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{434F27D4-DC9F-4E8C-B37A-223F90D5EF13}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E19CB4E8-83AF-4850-8900-00A31E06C9EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E19CB4E8-83AF-4850-8900-00A31E06C9EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E19CB4E8-83AF-4850-8900-00A31E06C9EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E19CB4E8-83AF-4850-8900-00A31E06C9EB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0AAE8C8A-60ED-4F2E-BE5D-D45C43A37BC8} = {315442BD-1551-4813-B6F1-4AF46AD27400}
+		{F53A2A72-6739-4B22-8F43-64B36B88317B} = {CBC93D81-59BD-4860-8A53-32A8F38E1C8D}
+		{434F27D4-DC9F-4E8C-B37A-223F90D5EF13} = {AFFDE190-BBD1-4308-AFAA-17E20973F817}
+		{E19CB4E8-83AF-4850-8900-00A31E06C9EB} = {23E35424-56A2-4D71-9C45-0FC5360F3C4F}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {40768D94-4901-4178-B730-5F47DBBF00B5}
+	EndGlobalSection
+EndGlobal
