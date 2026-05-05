@@ -2,23 +2,19 @@
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
 
-# Copy csproj and restore
-COPY *.csproj ./
-RUN dotnet restore
+# Copy full solution
+COPY . .
 
-# Copy everything and build
-COPY . ./
-RUN dotnet publish -c Release -o /app/publish
+# Restore using solution
+RUN dotnet restore AgileAI.sln
 
-# Runtime stage
+# Publish API project
+RUN dotnet publish Poulina.TraceServer.Api/Poulina.TraceServer.Api.csproj -c Release -o /app/publish
+
+# Runtime
 FROM mcr.microsoft.com/dotnet/aspnet:6.0
 WORKDIR /app
 
-# Copy published app
 COPY --from=build /app/publish .
 
-# Expose port (Render uses PORT env anyway)
-EXPOSE 8080
-
-# Start app
 ENTRYPOINT ["dotnet", "Poulina.TraceServer.Api.dll"]
