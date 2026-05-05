@@ -113,6 +113,22 @@ namespace AgileAi.Data.Context
             modelBuilder.Entity<Project>()
                 .HasIndex(p => p.Key)
                 .IsUnique();
+
+             modelBuilder.Entity<User>().HasData(
+     new User
+     {
+         UserId = Guid.NewGuid(),
+         Nom = "Jeribi",
+         Prenom = "Mohamed",
+         Email = "mohamed.jeribi.30@gmail.com",
+         MotDePasse = "Admin123!", // ⚠️ will fix below
+         Telephone = "29500107",
+         Role = "admin",
+         RefreshToken = null,
+         RefreshTokenExpiryTime = DateTime.UtcNow,
+         Token = null,
+         isDeleted = false
+     });
         }
     }
 
