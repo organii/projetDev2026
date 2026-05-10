@@ -54,7 +54,7 @@ namespace AgileAi.Api.Controllers
             user.Token = CreateJwt(user);
             var newRefreshToken = CreateRefreshToken();
             user.RefreshToken = newRefreshToken;
-            user.RefreshTokenExpiryTime = DateTime.Now.AddDays(RefreshTokenExpiryDays);
+            user.RefreshTokenExpiryTime = DateTime.UtcNow.AddDays(RefreshTokenExpiryDays);
             await _authContext.SaveChangesAsync();
 
             return Ok(new TokenApiDto
@@ -142,7 +142,7 @@ namespace AgileAi.Api.Controllers
 
             var user = await _authContext.Users.FirstOrDefaultAsync(u => u.UserId == userId);
 
-            if (user == null || user.RefreshToken != tokenApiDto.RefreshToken || user.RefreshTokenExpiryTime <= DateTime.Now)
+            if (user == null || user.RefreshToken != tokenApiDto.RefreshToken || user.RefreshTokenExpiryTime <= DateTime.UtcNow)
                 return BadRequest("Invalid Request");
 
             var newAccessToken = CreateJwt(user);
@@ -150,7 +150,7 @@ namespace AgileAi.Api.Controllers
 
             user.Token = newAccessToken;
             user.RefreshToken = newRefreshToken;
-            user.RefreshTokenExpiryTime = DateTime.Now.AddDays(RefreshTokenExpiryDays);
+            user.RefreshTokenExpiryTime = DateTime.UtcNow.AddDays(RefreshTokenExpiryDays);
             await _authContext.SaveChangesAsync();
 
             return Ok(new TokenApiDto
