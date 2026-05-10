@@ -15,6 +15,10 @@ RUN dotnet publish Poulina.TraceServer.Api/Poulina.TraceServer.Api.csproj -c Rel
 FROM mcr.microsoft.com/dotnet/aspnet:6.0
 WORKDIR /app
 
+ENV ASPNETCORE_URLS=http://0.0.0.0:10000
+ENV ASPNETCORE_ENVIRONMENT=Production
+
 COPY --from=build /app/publish .
 
-ENTRYPOINT ["dotnet", "Poulina.TraceServer.Api.dll"]
+EXPOSE 10000
+ENTRYPOINT ["dotnet", "AgileAi.Api.dll"]
