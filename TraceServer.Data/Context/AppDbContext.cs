@@ -124,7 +124,7 @@ namespace AgileAi.Data.Context
          Nom = "Jeribi",
          Prenom = "Mohamed",
          Email = "mohamed.jeribi.30@gmail.com",
-        MotDePasse = "Admin123!",
+        MotDePasse = "AQAAAAEAACcQAAAAEAARIjNEVWZ3iJmqu8zd7v8uOpqe4rVzG1BMPfH4KwfnAeX/C/EDxjb3T6oRERGwSQ==",
          Telephone = "29500107",
          Role = "admin",
          RefreshToken = null,
