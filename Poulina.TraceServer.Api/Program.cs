@@ -30,10 +30,16 @@ using System.IO;
 
 var builder = WebApplication.CreateBuilder(args);
 var jwtSecret = builder.Configuration["Jwt:Secret"];
+var connectionString = builder.Configuration.GetConnectionString("Connection");
 
 if (string.IsNullOrWhiteSpace(jwtSecret))
 {
     throw new InvalidOperationException("Jwt:Secret is missing from configuration.");
+}
+
+if (string.IsNullOrWhiteSpace(connectionString))
+{
+    throw new InvalidOperationException("ConnectionStrings:Connection is missing from configuration.");
 }
 
 builder.Services.AddEndpointsApiExplorer();
@@ -49,7 +55,7 @@ builder.Services.AddCors(options =>
 });
 
 builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("Connection")));
+    options.UseNpgsql(connectionString));
 
 
 builder.Services.AddAuthentication(x =>
@@ -189,6 +195,13 @@ builder.Services.AddScoped<IActivityService, ActivityService>();
 
 
 var app = builder.Build();
+
+using (var scope = app.Services.CreateScope())
+{
+    var dbContext = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+    dbContext.Database.EnsureCreated();
+}
+
 var uploadsPath = Path.Combine(app.Environment.ContentRootPath, "uploads");
 Directory.CreateDirectory(Path.Combine(uploadsPath, "attachments"));
 
@@ -205,19 +218,24 @@ if (app.Environment.IsDevelopment())
 }
 else
 {
-    var path = Environment.GetEnvironmentVariable("service");
-    var basePath = ":31633/" + Environment.GetEnvironmentVariable("service");
+    var servicePath = Environment.GetEnvironmentVariable("service");
     app.UseExceptionHandler("/Error");
     app.UseSwagger(c =>
     {
         c.RouteTemplate = "swagger/{documentName}/swagger.json";
-        c.PreSerializeFilters.Add((swaggerDoc, httpReq) => swaggerDoc.Servers = new List<OpenApiServer>
+        if (!string.IsNullOrWhiteSpace(servicePath))
         {
-            new OpenApiServer { Url = $"{httpReq.Scheme}://{httpReq.Host.Value}{basePath}"}
-        });
+            var basePath = ":31633/" + servicePath;
+            c.PreSerializeFilters.Add((swaggerDoc, httpReq) => swaggerDoc.Servers = new List<OpenApiServer>
+            {
+                new OpenApiServer { Url = $"{httpReq.Scheme}://{httpReq.Host.Value}{basePath}"}
+            });
+        }
     });
 
-    var endpoint = "/" + path + "/swagger/v1/swagger.json";
+    var endpoint = string.IsNullOrWhiteSpace(servicePath)
+        ? "/swagger/v1/swagger.json"
+        : "/" + servicePath + "/swagger/v1/swagger.json";
     app.UseSwaggerUI(c =>
     {
         c.SwaggerEndpoint(endpoint, "AGILE AI V1");

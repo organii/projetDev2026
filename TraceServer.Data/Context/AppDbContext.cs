@@ -5,6 +5,9 @@ namespace AgileAi.Data.Context
 {
     public class AppDbContext : DbContext
     {
+        private static readonly Guid SeedAdminUserId = Guid.Parse("11111111-1111-1111-1111-111111111111");
+        private static readonly DateTime SeedAdminRefreshTokenExpiryTime = new DateTime(2030, 1, 1, 0, 0, 0, DateTimeKind.Utc);
+
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
         {
         }
@@ -117,15 +120,15 @@ namespace AgileAi.Data.Context
              modelBuilder.Entity<User>().HasData(
      new User
      {
-         UserId = Guid.NewGuid(),
+        UserId = SeedAdminUserId,
          Nom = "Jeribi",
          Prenom = "Mohamed",
          Email = "mohamed.jeribi.30@gmail.com",
-         MotDePasse = "Admin123!", // ⚠️ will fix below
+        MotDePasse = "Admin123!",
          Telephone = "29500107",
          Role = "admin",
          RefreshToken = null,
-         RefreshTokenExpiryTime = DateTime.UtcNow,
+        RefreshTokenExpiryTime = SeedAdminRefreshTokenExpiryTime,
          Token = null,
          isDeleted = false
      });
