@@ -80,10 +80,20 @@ builder.Services.AddAuthentication(x =>
         {
             var authorization = context.Request.Headers["Authorization"].FirstOrDefault();
 
-            if (!string.IsNullOrWhiteSpace(authorization) &&
-                !authorization.StartsWith("Bearer ", StringComparison.OrdinalIgnoreCase))
+            if (!string.IsNullOrWhiteSpace(authorization))
             {
-                context.Token = authorization.Trim();
+                context.Token = authorization.StartsWith("Bearer ", StringComparison.OrdinalIgnoreCase)
+                    ? authorization.Substring("Bearer ".Length).Trim()
+                    : authorization.Trim();
+            }
+
+            var accessToken = context.Request.Query["access_token"].FirstOrDefault();
+            var path = context.HttpContext.Request.Path;
+
+            if (!string.IsNullOrWhiteSpace(accessToken) &&
+                path.StartsWithSegments("/hubs/board"))
+            {
+                context.Token = accessToken;
             }
 
             return Task.CompletedTask;

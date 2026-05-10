@@ -17,11 +17,16 @@ namespace AgileAi.Api.Controllers
     {
         private readonly AppDbContext _context;
         private readonly ICurrentUserService _currentUser;
+        private readonly IActivityService _activityService;
 
-        public NotificationsController(AppDbContext context, ICurrentUserService currentUser)
+        public NotificationsController(
+            AppDbContext context,
+            ICurrentUserService currentUser,
+            IActivityService activityService)
         {
             _context = context;
             _currentUser = currentUser;
+            _activityService = activityService;
         }
 
         [HttpGet("mine")]
@@ -43,6 +48,80 @@ namespace AgileAi.Api.Controllers
                 .ToListAsync();
 
             return Ok(notifications);
+        }
+
+        [HttpPost("TTest")]
+        public async Task<IActionResult> TTest([FromBody] TestNotificationRequestDto request)
+        {
+            if (request == null || request.ReceiverId == Guid.Empty)
+                return BadRequest(new ApiErrorResponse
+                {
+                    Message = "ReceiverId is required.",
+                    Code = "RECEIVER_ID_REQUIRED"
+                });
+
+            var receiverExists = await _context.Users.AnyAsync(u => u.UserId == request.ReceiverId);
+
+            if (!receiverExists)
+                return NotFound(new ApiErrorResponse
+                {
+                    Message = "Receiver user was not found.",
+                    Code = "RECEIVER_NOT_FOUND"
+                });
+
+            var description = string.IsNullOrWhiteSpace(request.Description)
+                ? "TEST"
+                : request.Description.Trim();
+
+            await _activityService.Notify(request.ReceiverId, description, "/notifications/test");
+
+            return Ok(new
+            {
+                receiverId = request.ReceiverId,
+                message = description,
+                link = "/notifications/test"
+            });
+        }
+
+        [HttpPost("Send")]
+        public async Task<IActionResult> Send([FromBody] SendNotificationRequestDto request)
+        {
+            if (request == null || request.ReceiverId == Guid.Empty)
+                return BadRequest(new ApiErrorResponse
+                {
+                    Message = "ReceiverId is required.",
+                    Code = "RECEIVER_ID_REQUIRED"
+                });
+
+            if (string.IsNullOrWhiteSpace(request.Description))
+                return BadRequest(new ApiErrorResponse
+                {
+                    Message = "Description is required.",
+                    Code = "DESCRIPTION_REQUIRED"
+                });
+
+            var receiverExists = await _context.Users.AnyAsync(u => u.UserId == request.ReceiverId);
+
+            if (!receiverExists)
+                return NotFound(new ApiErrorResponse
+                {
+                    Message = "Receiver user was not found.",
+                    Code = "RECEIVER_NOT_FOUND"
+                });
+
+            var description = request.Description.Trim();
+            var link = string.IsNullOrWhiteSpace(request.Link)
+                ? "/notifications"
+                : request.Link.Trim();
+
+            await _activityService.Notify(request.ReceiverId, description, link);
+
+            return Ok(new
+            {
+                receiverId = request.ReceiverId,
+                message = description,
+                link
+            });
         }
 
         [HttpPatch("{id}/read")]

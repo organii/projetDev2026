@@ -2,6 +2,19 @@ using System;
 
 namespace AgileAi.Domain.Dto
 {
+    public class TestNotificationRequestDto
+    {
+        public Guid ReceiverId { get; set; }
+        public string Description { get; set; }
+    }
+
+    public class SendNotificationRequestDto
+    {
+        public Guid ReceiverId { get; set; }
+        public string Description { get; set; }
+        public string Link { get; set; }
+    }
+
     public class NotificationResponseDto
     {
         public Guid NotificationId { get; set; }
